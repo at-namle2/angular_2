@@ -1,0 +1,32 @@
+<form  [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" name="firstname" formControlName="firstname">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName"> FirstName: </label>
+      <input class="form-control" type="text" name="firstName" placeholder="Name" ngModel #firstname="ngModel" required minlength="10">
+    </div>
+    <div class="form-group">
+      <label for="lastName"> LastName: </label>
+      <input class="form-control" type="text" name="lastName" placeholder="Last Name" ngModel #firstname="ngModel" required minlength="10">
+    </div>
+    <div class="form-group">
+      <label for="team"> Team: </label>
+      <input class="form-control" type="text" name="team" placeholder="Team" ngModel required>
+    </div>
+  </fieldset>
+  <fieldset>
+    <div class="form-group">
+      <label for="email"> Email: </label>
+      <input class="form-control" type="text" name="email" placeholder="Email" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="github"> Github: </label>
+      <input class="form-control" type="text" name="github" placeholder="Github" ngModel required>
+    </div>
+  </fieldset>
+  <button class="btn btn-success" type="submit" [disabled]="!contactForm.valid">click</button>
+</form>

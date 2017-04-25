@@ -10,7 +10,7 @@ import  { TrainersComponent } from './service/trainer.component';
 import  { DetailComponent } from './service/detail.component';
 import  { Mypipe } from './service/mypipe.pipe';
 import  { Mypipesearch } from './service/mypipesearch.pepe';
-
+import  { GroupformComponent } from './form/form.component';
 
 @NgModule({
   imports: [
@@ -20,7 +20,7 @@ import  { Mypipesearch } from './service/mypipesearch.pepe';
       FormsModule,
       ReactiveFormsModule
       ],
-  declarations: [ TrainersComponent, DetailComponent, Mypipe, Mypipesearch],
+  declarations: [ TrainersComponent, DetailComponent, Mypipe, Mypipesearch, GroupformComponent],
   bootstrap:    [ TrainersComponent ]
 })
 export class AppModule { }
