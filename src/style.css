@@ -1,0 +1,16 @@
+table {
+  margin-top: 5px;
+}
+.glyphicon:before {
+    content: "\e021";
+    padding: 0 10px;
+}
+.glyphicon-home {
+  color: red;
+}
+.glyphicon-calendar {
+  color: blue;
+}
+a {
+  text-decoration: none;
+}

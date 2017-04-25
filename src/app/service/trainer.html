@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>List trainer</h2>
+        <div class="input-group">
+          <input type="text" name="fullname" class="form-control" placeholder="Search for..." [(ngModel)]="teamName">
+          <span class="input-group-btn">
+            <button class="btn btn-info" type="submit">Search</button>
+          </span>
+        </div>
+        <p>Value: {{ teamName }}</p>
+      <table class="table table-hover">
+       <thead>
+          <tr class="success">
+            <th class="text-center">Avatar:</th>
+            <th>Name :</th>
+            <th>Team:</th>
+            <th>Join Date:</th>
+            <th>Click here</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of trainers | teamNamepipe:teamName; let i = index">
+            <td><img src="{{item.avatar | mypipe}}" alt="" class="img-circle img-responsive center-block" width="100px" height="100px"></td>
+            <td>{{item.name}}</td>
+            <td>{{item.team}}</td>
+            <td>{{item.joined}}</td>
+            <td><button class="btn btn-md btn-primary" (click)="viewDetail(i)">Detail</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <h2>Show List trainer</h2>
+      <detail [value]="selected"></detail>
+    </div>
+  </div>
+</div>
+

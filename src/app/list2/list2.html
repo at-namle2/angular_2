@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="stylelist.css">
+</head>
+<body>
+<div class="container">
+  <h1>{{title}}</h1>
+  <h2>{{person.name}}</h2>
+  <div>
+    <label>ID:</label>{{person.id}}
+  </div>
+  <div>
+  <label>Name:</label>
+    <input [(ngModel)]="person.name" placeholder="name">
+  </div>
+  <h1>Danh sach</h1>
+     <ul class="list">
+        <li  class="list-item" *ngFor="let item of arrayperson">
+          <a href="">{{item.id}}</a><span>{{item.name}}</span>
+        </li>
+      </ul>
+</div>
+</body>
+</html>

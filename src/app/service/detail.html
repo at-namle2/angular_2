@@ -1,0 +1,15 @@
+<div class="row" *ngIf="trainer">
+  <div class="col-md-12">
+    <div class="panel-heading">
+      <img src="{{trainer.avatar | mypipe}}" alt="" class="img-circle img-responsive center-block" width="100px" height="100px">
+    </div>
+    <h3>Information</h3>
+    <ul class="list-group">
+      <li class=" list-group-item list-group-item-info"><a href="#"><i class="glyphicon glyphicon-user"></i> {{trainer.name}}</a></li>
+      <li class="list-group-item"><a href="#"><i class="glyphicon glyphicon-home"></i>{{trainer.team}} </a></li>
+      <li class="list-group-item"><a href="#" target="_blank"><i class="glyphicon glyphicon-calendar"></i>{{trainer.joined | date}} </a></li>
+    </ul>
+  </div>
+</div>
+
+
